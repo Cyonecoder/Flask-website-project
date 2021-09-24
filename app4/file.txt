@@ -1,0 +1,37 @@
+<!-- <h1>Hello,{{ name| striptags}}</h1>
+
+{% macro render_comment(name) %}
+<li>{{ name }}</li>
+{% endmacro %}
+<ul>
+    {% for letter in name %}
+    {{ render_comment(letter) }}
+    {% endfor %}
+</ul> -->
+<!-- 
+    !!!!!!!ATENTTION!!!!!!!
+    {% import "macros.html" as macros %}
+
+<ul>
+    {% for comment in comments %}
+    {{macros.render_comment(comment)}}
+
+    {% endfor %}
+
+</ul> -->
+
+<!-- {% extends "base.html" %}
+{% block title %}
+user
+{% endblock %}
+{% block head %}
+
+{{super()}}
+<style>
+
+</style>
+{% endblock %}
+
+{% block body %}
+<h1>hello body</h1>
+{%endblock%} -->

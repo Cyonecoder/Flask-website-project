@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block page_content %}
+<div class=" containter ">
+    {%for message in get_flashed_messages()%}
+
+    <div class="alert alert-warning">
+        <Button type="button" class="clmose" data-dismiss="alert">
+            &times;
+
+        </Button>
+        {{message}}
+    </div>
+    {%endfor%}
+</div>
+
+<form method="POST">
+
+</form>
+<h1>Hello, {% if name %}{{name}} {% else %} Stranger {% endif %}!</h1>
+{% if not known %}
+<p> Pleased to meet you</p>
+{%else%}
+<p>Happy to see you again</p>
+{%endif%}
+
+
+<img src="https://img.icons8.com/material-outlined/24/000000/edit--v1.png" alt="edit" />
+<a href="{{url_for('user', name='abd', _external=True)}}">userabd</a>
+<a href="{{ url_for('static',filename='css/style.css',_external=True)}}">my css</a>
+
+<p>The local datte and time is {{moment(curent_time).format('LLL')}}.</p>
+
+<p>That was {{moment(curent_time).fromNow(refresh=True)}}.</p>
+
+{{wtf.quick_form(form)}}
+
+{% endblock %}
