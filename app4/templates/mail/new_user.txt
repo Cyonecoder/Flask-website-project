@@ -1,4 +1,0 @@
-<h1> hello {{user.username}}
-</h1>
-
-<p> this is txt</p>
