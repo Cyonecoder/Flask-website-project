@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{%import "bootstrap/wtf.html" as wtf%}
+{{wtf.quick_form(form)}}
+
+{% block title %}Flasky{% endblock %}
+
+<img src="https://img.icons8.com/material-outlined/24/000000/edit--v1.png" alt="edit" />
+{% block page_content %}
+<div class="page-header">
+    <h1>Hello, {% if name %}{{name}} {% else %} Stranger {% endif %}!</h1>
+    {{wtf.quick_form(form)}}
+    <!-- <form action="" method="POST">
+        <div>{{form.uname.label}}
+            <br>
+            {{form.uname(id="my-text-field")}}
+            <br>
+            {{form.submit()}}
+        </div>
+    </form> -->
+
+</div>
+{% endblock %}
